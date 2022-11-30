@@ -1,14 +1,15 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {initBurger} from './modules/menu/menu.js';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-
   // Utils
   // ---------------------------------
 
   iosVhFix();
+  initBurger();
 
   // Modules
   // ---------------------------------
