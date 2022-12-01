@@ -1,49 +1,76 @@
-.icon-menu {
-  border: none;
-  display: none;
-  background: inherit;
-  @media (max-width: 400px) {
-    display: block;
-    position: relative;
-    width: 30px;
-    height: 30px;
-    z-index: 5;
-    @media (any-hover: none) {
-      cursor: default;
-    }
-    span,
-    &::before,
-    &::after {
-      content: "";
-      transition: all 0.3s ease 0s;
-      right: 0;
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background-color: #000;
-    }
-    &::before {
-      top: 0;
-    }
-    &::after {
-      bottom: 0;
-    }
-    span {
-      top: calc(50% - rem(1));
-    }
-    .menu-open & {
-      span {
-        width: 0;
-      }
+.header {
+  width: 100%;
+  top: 0;
+  left: 0;
 
-      &::before {
-        top: calc(50% - rem(1));
-        transform: rotate(-45deg);
+  &__container {
+    min-width: 38px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 35px;
+    padding-bottom: 20px;
+    color: $color-text-light;
+    z-index: 2;
+
+    @include vp-1023 {
+      padding-top: 20px;
+    }
+
+    &_active {
+      z-index: 5;
+
+      @include vp-767 {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 35px;
+        flex-direction: column;
+        color: $color-text-dark;
+        background-color: $color-default-white;
+        z-index: 1;
       }
-      &::after {
-        bottom: calc(50% - rem(1));
-        transform: rotate(45deg);
-      }
+    }
+
+    &_active .header__overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      display: block;
+      background-color: rgba(0, 43, 102, 0.5);
+    }
+
+    &_active .menu__list {
+      display: block;
+      visibility: visible;
+    }
+
+    &_active .menu__button {
+      width: 15px;
+      height: 15px;
+    }
+
+    &_active .menu__button::before {
+      top: calc(50% - 1px);
+      transform: rotate(-45deg);
+      background-color: $color-bg-dark;
+    }
+
+    &_active .menu__button::after {
+      bottom: calc(50% - 1px);
+      transform: rotate(45deg);
+      background-color: $color-bg-dark;
+    }
+
+    &_active .menu__button span {
+      width: 0;
     }
   }
+}
+
+.logo__link {
+  display: block;
 }

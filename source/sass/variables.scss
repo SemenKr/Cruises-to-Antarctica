@@ -4,10 +4,11 @@
 // Default
 
 $color-default-black: #000000;
-$color-default-white: #e5e5e5;
+$color-default-white: #f9fbfd;
 $color-text-light: #f9fbfd;
 $color-text-dark: #011c40;
 $color-bg-dark: #011c40;
+$color-bg-support: #00306b;
 $color-transparent: rgba(255, 255, 255, 0);
 
 // Project palette
@@ -18,11 +19,7 @@ $color-torch-red: #ff1553;
 
 // Gradient
 
-$black-to-right: linear-gradient(
-  90deg,
-  rgba(0, 0, 0, 0.75) 0%,
-  rgba(0, 0, 0, 0) 75%
-);
+$black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 
 // Typography
 // ---------------------------------
@@ -30,10 +27,16 @@ $black-to-right: linear-gradient(
 // переменная используемая в html для подключения скейлинга
 $fz-default: 16px;
 $fz-small: 14px;
+$fz-large: 18px;
+
+$fw-small: 400;
+$fw-medium: 500;
+$fw-m-l: 600;
+$fw-large: 700;
 
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
-$ff-rouble: "Rouble", "Arial", sans-serif;
+$ff-default: "Montserrat", "Arial", sans-serif;
 
 $ff-placeholder: "Placeholder", "Arial", sans-serif;
 
