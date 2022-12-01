@@ -6,6 +6,14 @@ import {initModals} from './modules/modals/init-modals';
 
 window.addEventListener('DOMContentLoaded', () => {
   // Utils
+
+  let menuBtn = document.querySelector('.menu__button');
+  let menu = document.querySelector('.header__container');
+
+  menuBtn.addEventListener('click', function () {
+    menuBtn.classList.toggle('_active');
+    menu.classList.toggle('_active');
+  });
   // ---------------------------------
 
   iosVhFix();

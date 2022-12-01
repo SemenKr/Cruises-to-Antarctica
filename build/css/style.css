@@ -787,6 +787,13 @@ button,
 }
 
 .header__container {
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
   min-width: 38px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -800,32 +807,22 @@ button,
   z-index: 2;
 }
 
-.header__container_active {
-  z-index: 5;
+.header__container._active {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -webkit-transform-origin: right;
+  -ms-transform-origin: right;
+  transform-origin: right;
+  z-index: 2;
 }
 
-.header__container_active .header__overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  display: block;
-  background-color: rgba(0, 43, 102, 0.5);
-}
-
-.header__container_active .menu__list {
-  display: block;
-  visibility: visible;
-}
-
-.header__container_active .menu__button {
+.header__container._active .menu__button {
   width: 15px;
   height: 15px;
 }
 
-.header__container_active .menu__button::before {
+.header__container._active .menu__button::before {
   top: calc(50% - 1px);
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -833,7 +830,7 @@ button,
   background-color: #011c40;
 }
 
-.header__container_active .menu__button::after {
+.header__container._active .menu__button::after {
   bottom: calc(50% - 1px);
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -841,12 +838,31 @@ button,
   background-color: #011c40;
 }
 
-.header__container_active .menu__button span {
+.header__container._active .menu__button span {
   width: 0;
+}
+
+.header__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  background-color: rgba(0, 43, 102, 0.5);
 }
 
 .logo__link {
   display: block;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
 }
 
 .logo__link {
@@ -870,8 +886,9 @@ button,
 .menu__button {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  display: none;
-  visibility: hidden;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
   border: none;
   position: fixed;
   top: 25px;
@@ -925,7 +942,13 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20px 23px;
+  gap: 10px 23px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
 }
 
 .menu__item a {
@@ -1020,7 +1043,7 @@ button,
     width: 100%;
   }
 
-  .header__container_active {
+  .header__container._active {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -1032,7 +1055,26 @@ button,
     flex-direction: column;
     color: #011c40;
     background-color: #f9fbfd;
+    z-index: 2;
+  }
+
+  .header__container._active .header__overlay {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
     z-index: 1;
+  }
+
+  .header__container._active .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-top: 75px;
+    -webkit-transform: translateX(150%);
+    -ms-transform: translateX(150%);
+    transform: translateX(150%);
+    top: 0;
   }
 
   .logo {
@@ -1050,9 +1092,14 @@ button,
     padding-top: 185px;
   }
 
+  .menu {
+    position: absolute;
+  }
+
   .menu__button {
-    display: block;
-    visibility: visible;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
     z-index: 5;
   }
 
@@ -1062,8 +1109,9 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     padding-top: 75px;
-    display: none;
-    visibility: hidden;
+    -webkit-transform: translateX(-150%);
+    -ms-transform: translateX(-150%);
+    transform: translateX(-150%);
   }
 
   .menu__item a {

@@ -5,6 +5,9 @@
   left: 0;
 
   &__container {
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+    transform-origin: right top;
     min-width: 38px;
     display: flex;
     justify-content: space-between;
@@ -17,8 +20,10 @@
       padding-top: 20px;
     }
 
-    &_active {
-      z-index: 5;
+    &._active {
+      transition: all 0.3s ease 0s;
+      transform-origin: right;
+      z-index: 2;
 
       @include vp-767 {
         position: fixed;
@@ -29,49 +34,63 @@
         flex-direction: column;
         color: $color-text-dark;
         background-color: $color-default-white;
+        z-index: 2;
+      }
+    }
+
+    &._active .header__overlay {
+
+      @include vp-767 {
+        transform: scale(1);
         z-index: 1;
       }
     }
 
-    &_active .header__overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-      display: block;
-      background-color: rgba(0, 43, 102, 0.5);
+    &._active .menu__list {
+      @include vp-767 {
+        flex-direction: column;
+        padding-top: 75px;
+        transform: translateX(+150%);
+        top: 0;
+      }
     }
 
-    &_active .menu__list {
-      display: block;
-      visibility: visible;
-    }
-
-    &_active .menu__button {
+    &._active .menu__button {
       width: 15px;
       height: 15px;
     }
 
-    &_active .menu__button::before {
+    &._active .menu__button::before {
       top: calc(50% - 1px);
       transform: rotate(-45deg);
       background-color: $color-bg-dark;
     }
 
-    &_active .menu__button::after {
+    &._active .menu__button::after {
       bottom: calc(50% - 1px);
       transform: rotate(45deg);
       background-color: $color-bg-dark;
     }
 
-    &_active .menu__button span {
+    &._active .menu__button span {
       width: 0;
     }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    transform: scale(0);
+    background-color: rgba(0, 43, 102, 0.5);
   }
 }
 
 .logo__link {
   display: block;
+  transition: all 0.3s ease 0s;
+  transform-origin: right top;
 }
