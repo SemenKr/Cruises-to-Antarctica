@@ -5,7 +5,6 @@
   left: 0;
 
   &__container {
-    overflow: hidden;
     transition: all 0.3s ease 0s;
     transform-origin: right top;
     min-width: 38px;
@@ -14,7 +13,7 @@
     padding-top: 35px;
     padding-bottom: 20px;
     color: $color-text-light;
-    z-index: 2;
+    z-index: 3;
 
     @include vp-1023 {
       padding-top: 20px;
@@ -23,7 +22,6 @@
     &._active {
       transition: all 0.3s ease 0s;
       transform-origin: right;
-      z-index: 2;
 
       @include vp-767 {
         position: fixed;
@@ -34,23 +32,30 @@
         flex-direction: column;
         color: $color-text-dark;
         background-color: $color-default-white;
-        z-index: 2;
+        z-index: 4;
+
+        &:before {
+          content: "";
+          position: fixed;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 43, 102, 0.5);
+          opacity: 1;
+          z-index: -1;
+        }
       }
     }
 
-    &._active .header__overlay {
-
-      @include vp-767 {
-        transform: scale(1);
-        z-index: 1;
-      }
-    }
 
     &._active .menu__list {
       @include vp-767 {
         flex-direction: column;
         padding-top: 75px;
-        transform: translateX(+150%);
+        padding-left: 20px;
+        transform: translateX(0px);
         top: 0;
       }
     }
@@ -77,20 +82,34 @@
     }
   }
 
-  &__overlay {
+  // &__overlay {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100vw;
+  //   height: 100vh;
+  //   z-index: 1;
+  //   transform: scale(0);
+  //   background-color: rgba(0, 43, 102, 0.5);
+  // }
+}
+
+header__container._active:has(.header) {
+  &:before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-    transform: scale(0);
-    background-color: rgba(0, 43, 102, 0.5);
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 43, 102, 0.5);
+    opacity: 1;
+    z-index: -1;
   }
 }
 
 .logo__link {
   display: block;
   transition: all 0.3s ease 0s;
-  transform-origin: right top;
 }
