@@ -1,6 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {initBurger} from './modules/menu/menu.js';
+// import {initBurger} from './modules/menu/menu.js';
 
 // ---------------------------------
 
@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
-  initBurger();
+
 
   // Modules
   // ---------------------------------

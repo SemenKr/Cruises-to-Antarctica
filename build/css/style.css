@@ -780,6 +780,7 @@ button,
 }
 
 .header {
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
@@ -860,6 +861,85 @@ button,
 .intro {
   padding-top: 283px;
   background-color: #00306b;
+}
+
+.menu {
+  position: relative;
+}
+
+.menu__button {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: none;
+  visibility: hidden;
+  border: none;
+  position: fixed;
+  top: 25px;
+  right: 15px;
+  width: 24px;
+  height: 12px;
+  background-color: inherit;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.menu__button:hover {
+  opacity: 0.7;
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.menu__button span,
+.menu__button::after,
+.menu__button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #f9fbfd;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  right: 0;
+}
+
+.menu__button::after {
+  bottom: 0;
+}
+
+.menu__button::before {
+  top: 0;
+}
+
+.menu__button span {
+  top: calc(50% - 1px);
+}
+
+.menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px 23px;
+}
+
+.menu__item a {
+  color: inherit;
+  padding: 5px;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  border: none;
+  border-radius: 3px;
+}
+
+.menu__item a:focus {
+  outline: 2px solid #f9fbfd;
 }
 
 /* @mixin hover-focus {
@@ -969,10 +1049,37 @@ button,
   .intro {
     padding-top: 185px;
   }
+
+  .menu__button {
+    display: block;
+    visibility: visible;
+    z-index: 5;
+  }
+
+  .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-top: 75px;
+    display: none;
+    visibility: hidden;
+  }
+
+  .menu__item a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
+  }
+
+  .menu__item a:hover:not(.focus-visible) {
+    text-decoration: underline;
+    opacity: 0.7;
   }
 }
