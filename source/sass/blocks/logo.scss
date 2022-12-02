@@ -1,5 +1,6 @@
 .logo {
   transition: all 0.3s ease 0s;
+
   @include vp-767 {
     position: absolute;
     top: 20px;

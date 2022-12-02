@@ -16,6 +16,7 @@
 <body>
   <div class="wrapper">
     <header class="header">
+      <div class="header__overlay"></div>
       <div class="container">
         <div class="header__container">
           <button type="submit" class="menu__button"><span></span></button>
@@ -34,7 +35,6 @@
               <li class="menu__item"><a href="#">Контакты</a></li>
             </ul>
           </nav>
-          <div class="header__overlay"></div>
         </div>
       </div>
     </header>
@@ -45,9 +45,57 @@
           <p>Волшебный мир айсбергов и пингвинов</p>
         </div>
       </section>
+      <section class="adventure">
+        <div class="container">
+          <div class="adventure__container">
+            <div class="adventure__content">
+              <h2 class="adventure__title">Путешествие на край Земли</h2>
+              <p class="adventure__description">Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+            </div>
+            <div class="adventure__image">
+              <picture>
+                <source type="image/webp" srcset="./img/penguin.webp, ./img/penguin@2.webp 2x ">
+                <img src="./img/penguin.jpg" width="560" height="301" alt="Пингвины.">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-      <div class="container"></div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__container">
+          <div class="footer__logo">
+            <a class="logo__link" href="#">
+              <svg class="logo__img" width="70" height="38" viewBox="0 0 70 38">
+                <use xlink:href="./img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+          </div>
+          <nav class="footer__menu menu-footer">
+            <ul class="menu-footer__list">
+              <li class="menu-footer__item"><a href="#">Преимущества </a></li>
+              <li class="menu-footer__item"><a href="#">Направления</a></li>
+              <li class="menu-footer__item"><a href="#">Ближайшие круизы</a></li>
+              <li class="menu-footer__item"><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="footer__social social">
+            <ul class="social__list">
+              <li><a href="#"> <svg class="social__img" width="20" height="20" viewBox="0 0 20 20">
+                    <use xlink:href="./img/sprite.svg#social-class"></use>
+                  </svg></a></li>
+              <li><a href="#"> <svg class="social__img" width="20" height="20" viewBox="0 0 20 20">
+                    <use xlink:href="./img/sprite.svg#social-circle"></use>
+                  </svg></a></li>
+              <li><a href="#"> <svg class="social__img" width="20" height="20" viewBox="0 0 20 20">
+                    <use xlink:href="./img/sprite.svg#social-reddit"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__social"></div>
+      </div>
     </footer>
   </div>
 

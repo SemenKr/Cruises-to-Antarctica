@@ -1,0 +1,29 @@
+.menu-footer {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @include vp-1023 {
+      gap: 17px 23px;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+    }
+  }
+
+  a {
+    color: inherit;
+    padding: 3px 0;
+    font-size: 16px;
+    line-height: 1;
+
+    @include vp-1023 {
+      font-size: 12px;
+    }
+  }
+}

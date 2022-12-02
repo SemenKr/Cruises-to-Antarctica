@@ -1,25 +1,20 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-// import {initBurger} from './modules/menu/menu.js';
+import {initBurger} from './modules/menu/menu.js';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
   // Utils
 
-  let menuBtn = document.querySelector('.menu__button');
-  let menu = document.querySelector('.header__container');
 
-  menuBtn.addEventListener('click', function () {
-    menuBtn.classList.toggle('_active');
-    menu.classList.toggle('_active');
-  });
   // ---------------------------------
 
   iosVhFix();
 
 
   // Modules
+  initBurger();
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
