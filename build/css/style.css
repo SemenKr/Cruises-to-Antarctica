@@ -436,7 +436,7 @@ html {
   font-size: 16px;
   line-height: 24px;
   font-family: "Placeholder", "Arial", sans-serif;
-  color: #000000;
+  color: #011c40;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -903,6 +903,72 @@ header__container._active:has(.header):before {
   line-height: 1;
 }
 
+.features {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: center bottom/cover no-repeat #def4fd url("../img/background-adventure.webp");
+}
+
+.features__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.features h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.features-content__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feature-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #f9fbfd;
+  padding: 30px 30px 50px 30px;
+  height: 100%;
+}
+
+.feature-card__img {
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
+  order: -1;
+  margin-bottom: 25px;
+}
+
+.feature-card h3 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.feature-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
 .menu {
   position: relative;
   overflow: hidden;
@@ -1177,6 +1243,28 @@ header__container._active:has(.header):before {
     font-size: 18px;
   }
 
+  .features {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: center bottom/cover no-repeat #def4fd url("../img/background-adventure-tablet.webp");
+  }
+
+  .features-content__list {
+    gap: 30px;
+  }
+
+  .feature-card {
+    padding: 26px 20px 25px 20px;
+  }
+
+  .feature-card__img {
+    margin-bottom: 24px;
+  }
+
+  .feature-card h3 {
+    line-height: 1.4;
+  }
+
   .menu__list {
     gap: 10px 23px;
   }
@@ -1221,6 +1309,10 @@ header__container._active:has(.header):before {
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .about {
     background: center bottom/cover no-repeat url("../img/backgroundtablet@2.webp");
+  }
+
+  .features {
+    background: center bottom/cover no-repeat #def4fd url("../img/background-adventure-tablet@2.webp");
   }
 }
 
@@ -1314,6 +1406,29 @@ header__container._active:has(.header):before {
     line-height: 1.4;
   }
 
+  .features {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    background: center bottom/cover no-repeat #def4fd url("../img/background-adventure-mobile.webp");
+  }
+
+  .features__container {
+    gap: 40px;
+  }
+
+  .features-content__list {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .feature-card {
+    padding: 25px 20px 25px 20px;
+  }
+
+  .feature-card__img {
+    margin-bottom: 25px;
+  }
+
   .menu {
     position: absolute;
     max-width: 250px;
@@ -1384,6 +1499,10 @@ header__container._active:has(.header):before {
   .about {
     background: center bottom/cover no-repeat url("../img/backgroundmobile@2.webp");
   }
+
+  .features {
+    background: center bottom/cover no-repeat #def4fd url("../img/backgroundadventure-mobile@2.webp");
+  }
 }
 
 @media (hover: hover) {
@@ -1400,5 +1519,9 @@ header__container._active:has(.header):before {
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .about {
     background-image: center bottom/cover no-repeat url("../img/background@2.webp");
+  }
+
+  .features {
+    background-image: center bottom/cover no-repeat #def4fd url("../img/background-adventure@2.webp");
   }
 }

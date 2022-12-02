@@ -1,0 +1,44 @@
+.features {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: center bottom/cover no-repeat  #def4fd url("../img/background-adventure.webp");
+
+  @include retina {
+    background-image: center bottom / cover no-repeat  #def4fd url("../img/background-adventure@2.webp");
+  }
+
+  @include vp-1023 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: center bottom/cover no-repeat  #def4fd  url("../img/background-adventure-tablet.webp");
+
+    @include retina {
+      background: center bottom / cover no-repeat  #def4fd url("../img/background-adventure-tablet@2.webp");
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    background: center bottom/cover no-repeat  #def4fd  url("../img/background-adventure-mobile.webp");
+
+    @include retina {
+      background: center bottom / cover no-repeat  #def4fd url("../img/backgroundadventure-mobile@2.webp");
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    @include vp-767 {
+      gap: 40px;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    margin: 0;
+  }
+}
