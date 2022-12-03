@@ -636,25 +636,27 @@ button,
   width: 100%;
   max-width: 1160px;
   margin: 0 auto;
-  padding: 0 40px;
   position: relative;
 }
 
 .btn {
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-  padding: 15px 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 10px 10px;
   width: 100%;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.5;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   background-color: #f9fbfd;
   border: none;
   cursor: pointer;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
 }
 
 .btn--red {
@@ -668,6 +670,16 @@ button,
 
 .btn.focus-visible:focus {
   opacity: 0.8;
+  -webkit-box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn:active {
+  -webkit-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
+  -webkit-box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
 }
 
 .modal {
@@ -1093,6 +1105,7 @@ header__container._active:has(.header):before {
 }
 
 .card {
+  overflow: hidden;
   background-color: #011c40;
   position: relative;
   -webkit-transition: all 0.3s ease 0s;
@@ -1100,7 +1113,6 @@ header__container._active:has(.header):before {
   transition: all 0.3s ease 0s;
   width: 100%;
   aspect-ratio: 260/386;
-  overflow: hidden;
 }
 
 .card:hover:before {
@@ -1149,9 +1161,18 @@ header__container._active:has(.header):before {
 }
 
 .card__content {
-  position: relative;
+  position: absolute;
   color: #f9fbfd;
-  padding: 35px 25px;
+  padding: 29px 24px 25px 26px;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  -webkit-transform: translate(6px, 79%);
+  -ms-transform: translate(6px, 79%);
+  transform: translate(6px, 79%);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .card h3 {
@@ -1159,10 +1180,78 @@ header__container._active:has(.header):before {
   font-size: 18px;
   line-height: 1.5;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 14px;
 }
 
 .card dl {
+  margin: 0;
+  opacity: 0;
+}
+
+.card dt {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  margin-bottom: 1px;
+}
+
+.card dd {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.card__button {
+  margin-top: 12px;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover .card__content {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.card:hover dl {
+  opacity: 1;
+}
+
+.booking {
+  background: center bottom/cover no-repeat #def4fd url("../../img/background-form.webp");
+  padding: 50px 0;
+}
+
+.booking__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 144px;
+  -moz-column-gap: 144px;
+  column-gap: 144px;
+  padding-left: 60px;
+  padding-right: 60px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.booking h2 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.booking p {
+  font-size: 18px;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -1400,6 +1489,28 @@ header__container._active:has(.header):before {
     padding: 35px;
   }
 
+  .booking {
+    padding: 100px 0;
+    background: center bottom/cover no-repeat #def4fd url("../../img/background-form-tablet.webp");
+  }
+
+  .booking__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 60px;
+  }
+
+  .booking h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+
   .social__list {
     gap: 20px 22px;
   }
@@ -1439,6 +1550,10 @@ header__container._active:has(.header):before {
 
   .features {
     background: center bottom/cover no-repeat #def4fd url("../img/background-adventure-tablet@2.webp");
+  }
+
+  .booking {
+    background: center bottom/cover no-repeat #def4fd url("../../img/background-form-tablet@2.webp");
   }
 }
 
@@ -1610,6 +1725,29 @@ header__container._active:has(.header):before {
     padding: 35px 25px;
   }
 
+  .booking {
+    padding: 65px 0;
+    background: center bottom/cover no-repeat #def4fd url("../../img/background-form-mobile.webp");
+  }
+
+  .booking__container {
+    row-gap: 40px;
+  }
+
+  .booking h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .booking p {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .booking br {
+    display: none;
+  }
+
   .footer__container {
     padding: 40px 0;
     -webkit-box-orient: vertical;
@@ -1656,11 +1794,17 @@ header__container._active:has(.header):before {
   .features {
     background: center bottom/cover no-repeat #def4fd url("../img/backgroundadventure-mobile@2.webp");
   }
+
+  .booking {
+    background: center bottom/cover no-repeat #def4fd url("../../img/background-form-mobile@2.webp");
+  }
 }
 
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
+    -webkit-box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
   }
 
   .menu__item a:hover:not(.focus-visible) {
@@ -1676,5 +1820,9 @@ header__container._active:has(.header):before {
 
   .features {
     background-image: center bottom/cover no-repeat #def4fd url("../img/background-adventure@2.webp");
+  }
+
+  .booking {
+    background: center bottom/cover no-repeat #def4fd url("../../img/background-form@2.webp");
   }
 }

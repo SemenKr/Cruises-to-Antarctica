@@ -1,11 +1,10 @@
 .card {
-
+  overflow: hidden;
   background-color: $color-bg-dark;
   position: relative;
   transition: all 0.3s ease 0s;
   width: 100%;
   aspect-ratio: 260/386;
-  overflow: hidden;
 
   @include vp-767 {
     aspect-ratio: 270/386;
@@ -58,9 +57,15 @@
   }
 
   &__content {
-    position: relative;
+    position: absolute;
     color: $color-text-light;
-    padding: 35px 25px;
+    padding: 29px 24px 25px 26px;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    transform: translate( 6px,79%);
+    transition: all 0.3s ease 0s;
+
 
     @include vp-1023 {
       padding: 35px;
@@ -76,11 +81,47 @@
     font-size: 18px;
     line-height: 1.5;
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 14px;
   }
 
   dl {
     margin: 0;
+    opacity: 0;
+  }
+
+  dt {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    margin-bottom: 1px;
+  }
+
+  dd {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  &__button {
+    margin-top: 12px;
+  }
+
+}
+
+.card:hover {
+  &::before {
+    opacity: 1;
+  }
+
+  .card__content {
+    transform: translate( 0,0);
+  }
+
+  dl {
+    opacity: 1;
   }
 
 }
