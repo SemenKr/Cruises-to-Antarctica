@@ -1,0 +1,86 @@
+.card {
+
+  background-color: $color-bg-dark;
+  position: relative;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+  aspect-ratio: 260/386;
+  overflow: hidden;
+
+  @include vp-767 {
+    aspect-ratio: 270/386;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: $color-bg-dark;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.3s ease 0s;
+  }
+
+  &__preview,
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    object-fit: cover;
+  }
+
+  &__preview {
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(rgba(1, 28, 64, 0) 0%,
+      #011C40 100%);
+    }
+  }
+
+  &__content {
+    position: relative;
+    color: $color-text-light;
+    padding: 35px 25px;
+
+    @include vp-1023 {
+      padding: 35px;
+    }
+
+    @include vp-767 {
+      padding: 35px 25px;
+    }
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  dl {
+    margin: 0;
+  }
+
+}
