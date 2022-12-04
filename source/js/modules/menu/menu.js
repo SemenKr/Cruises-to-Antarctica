@@ -5,12 +5,24 @@ const _scrollLock = new ScrollLock();
 const menuBtn = document.querySelector('.menu__button');
 const menu = document.querySelector('.header__container');
 const menuOverlay = document.querySelector('.header__overlay');
+const menuLinks = document.querySelector('.header__menu').querySelectorAll('.menu__link');
 
 const closeMenu = () => {
   menuOverlay.addEventListener('click', () => {
     menu.classList.remove('_active');
     menuOverlay.classList.remove('_active');
     _scrollLock.enableScrolling();
+  });
+};
+
+const closeLink = () => {
+
+  menuLinks.forEach((elem) => {
+    elem.addEventListener('click', () => {
+      menu.classList.remove('_active');
+      menuOverlay.classList.remove('_active');
+      _scrollLock.enableScrolling();
+    });
   });
 };
 
@@ -31,6 +43,7 @@ const initBurger = () => {
     }
   });
 
+  closeLink();
   closeMenu();
 
 

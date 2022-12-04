@@ -17,7 +17,8 @@ html {
   font-size: $fz-default;
   line-height: 24px;
   font-family: $ff-placeholder;
-  color: $color-text-dark;;
+  color: $color-text-dark;
+  scroll-behavior: smooth;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
