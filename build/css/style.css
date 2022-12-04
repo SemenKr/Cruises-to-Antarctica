@@ -1384,6 +1384,11 @@ header__container._active:has(.header):before {
   opacity: 0.5;
 }
 
+.map__hint {
+  background-color: #f9fbfd;
+  padding: 5px;
+}
+
 .footer {
   color: #f9fbfd;
   background: #011c40;
