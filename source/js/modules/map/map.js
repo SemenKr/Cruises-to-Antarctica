@@ -4,14 +4,16 @@
 
 const MY_LATITUDE = '59.938635';
 const MY_LONGITUDE = '30.323118';
-const myZoomMap = '16';
+const MAP_CENTER_LATITUDE = '59.94';
+const MAP_CENTER_LONGITUDE = '30.324';
+const myZoomMap = '15';
 const initMap = function () {
 
   ymaps.ready(init);
   function init() {
     // Создание карты.
     const myMap = new ymaps.Map('map', {
-      center: [MY_LATITUDE, MY_LONGITUDE],
+      center: [MAP_CENTER_LATITUDE, MAP_CENTER_LONGITUDE],
       // Уровень масштабирования. Допустимые значения:
       // от 0 (весь мир) до 19.
       zoom: myZoomMap,
@@ -32,7 +34,7 @@ const initMap = function () {
       iconImageSize: [18, 22],
       iconImageOffset: [-9, -11],
     });
-    map.container.fitToViewport();
+    myMap.behaviors.disable('scrollZoom');
     myMap.geoObjects.add(placeMark);
   }
 };

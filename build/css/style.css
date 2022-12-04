@@ -635,7 +635,9 @@ button,
 .container {
   width: 100%;
   max-width: 1160px;
+  min-width: 270px;
   margin: 0 auto;
+  padding: 0 45px;
   position: relative;
 }
 
@@ -1406,6 +1408,17 @@ header__container._active:has(.header):before {
   margin-bottom: 40px;
 }
 
+.address a {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.address a:hover {
+  opacity: 0.5;
+  text-decoration: underline;
+}
+
 .address__link-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1438,6 +1451,12 @@ header__container._active:has(.header):before {
 .map__hint {
   background-color: #f9fbfd;
   padding: 5px;
+}
+
+.map__balloon {
+  background-color: #f9fbfd;
+  padding: 5px;
+  display: block;
 }
 
 .footer {
@@ -1962,6 +1981,11 @@ header__container._active:has(.header):before {
     grid-template-columns: 1fr;
     padding: 65px 0;
     row-gap: 40px;
+  }
+
+  .contacts__content {
+    -ms-grid-row: 1;
+    grid-row: 1/1;
   }
 
   .map {

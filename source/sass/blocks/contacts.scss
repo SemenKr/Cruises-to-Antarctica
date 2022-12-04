@@ -18,4 +18,10 @@
       row-gap: 40px;
     }
   }
+
+  &__content {
+    @include vp-767 {
+      grid-row: 1 / 1;
+    }
+  }
 }

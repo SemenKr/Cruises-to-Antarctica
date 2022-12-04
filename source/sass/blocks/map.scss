@@ -16,4 +16,10 @@
     background-color: $color-default-white;
     padding: 5px;
   }
+
+  &__balloon {
+    background-color: $color-default-white;
+    padding: 5px;
+    display: block;
+  }
 }
