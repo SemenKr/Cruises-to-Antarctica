@@ -402,17 +402,17 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-display: swap;
 }
 
@@ -1384,6 +1384,57 @@ header__container._active:has(.header):before {
   opacity: 0.5;
 }
 
+.contacts__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  padding: 120px 0;
+  -webkit-column-gap: 100px;
+  -moz-column-gap: 100px;
+  column-gap: 100px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.address p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.address__link-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.address__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.map {
+  min-height: 306px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .map__hint {
   background-color: #f9fbfd;
   padding: 5px;
@@ -1648,6 +1699,17 @@ header__container._active:has(.header):before {
     white-space: normal;
   }
 
+  .contacts__container {
+    padding: 100px 0;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+  }
+
+  .map {
+    min-height: 335px;
+  }
+
   .social__list {
     gap: 20px 22px;
   }
@@ -1895,6 +1957,17 @@ header__container._active:has(.header):before {
     text-align: center;
   }
 
+  .contacts__container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    padding: 65px 0;
+    row-gap: 40px;
+  }
+
+  .map {
+    min-height: 316px;
+  }
+
   .footer__container {
     padding: 40px 0;
     -webkit-box-orient: vertical;
@@ -1939,7 +2012,7 @@ header__container._active:has(.header):before {
   }
 
   .features {
-    background: center bottom/cover no-repeat #def4fd url("../img/backgroundadventure-mobile@2.webp");
+    background: center bottom/cover no-repeat #def4fd url("../img/background-adventure-mobile@2.webp");
   }
 
   .booking {

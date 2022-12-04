@@ -1,0 +1,22 @@
+.address {
+
+  p  {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  &__link-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}

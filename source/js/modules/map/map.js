@@ -26,11 +26,13 @@ const initMap = function () {
         '</div>'
       ].join(''),
     }, {
-      iconLoyout: 'defoult#image',
-      iconImageHref: './img/svg/location.svg',
+      // Меняем иконку на свое изображение
+      iconLayout: 'default#image',
+      iconImageHref: 'img/svg/location.svg',
       iconImageSize: [18, 22],
+      iconImageOffset: [-9, -11],
     });
-
+    map.container.fitToViewport();
     myMap.geoObjects.add(placeMark);
   }
 };
