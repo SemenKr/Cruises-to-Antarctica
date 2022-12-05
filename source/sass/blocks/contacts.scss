@@ -2,8 +2,8 @@
 
   &__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 120px 0 ;
+    grid-template-columns: 48% 1fr;
+    padding: 120px 0 120px;
     column-gap: 100px;
     align-items: center;
 
@@ -19,7 +19,10 @@
     }
   }
 
+
+
   &__content {
+    
     @include vp-767 {
       grid-row: 1 / 1;
     }

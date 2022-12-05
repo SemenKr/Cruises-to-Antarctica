@@ -1,10 +1,7 @@
 .form {
   background-color: $color-bg-dark;
-  padding: 50px;
+  padding: 44px 50px 52px 50px;
   color: $color-text-light;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   min-width: 270px;
 
   @include vp-767 {
@@ -16,6 +13,7 @@
     font-size: 18px;
     line-height: 1.5;
     margin: 0;
+    margin-bottom: 28px;
 
     @include vp-767 {
       line-height: 1.4;
@@ -30,6 +28,7 @@
     border: none;
     padding-left: 16px;
     transition: all 0.3s ease 0s;
+    margin-bottom: 21px;
 
     &:hover {
       outline: 3px solid $color-default-white;
@@ -46,6 +45,11 @@
       opacity: 0.7;
       border: none;
     }
+  }
+
+  &__checkbox {
+    margin-top: 2px;
+    margin-bottom: 28px;
   }
 
   .form__input-wrapper {

@@ -1,5 +1,5 @@
 .features {
-  padding-top: 120px;
+  padding-top: 110px;
   padding-bottom: 120px;
   background: center bottom/cover no-repeat  #def4fd url("../img/background-adventure.webp");
 
@@ -8,7 +8,7 @@
   }
 
   @include vp-1023 {
-    padding-top: 100px;
+    padding-top: 90px;
     padding-bottom: 100px;
     background: center bottom/cover no-repeat  #def4fd  url("../img/background-adventure-tablet.webp");
 
@@ -30,7 +30,7 @@
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 49px;
 
     @include vp-767 {
       gap: 40px;
@@ -40,5 +40,12 @@
   h2 {
     text-align: center;
     margin: 0;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.5;
+
+    @include vp-1023 {
+      font-size: 26px;
+    }
   }
 }

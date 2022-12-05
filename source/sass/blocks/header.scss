@@ -4,6 +4,10 @@
   top: 0;
   left: 0;
 
+  &__menu {
+    margin-top: 8px;
+  }
+
   &__button {
     box-sizing: border-box;
     transform: scale(0);
