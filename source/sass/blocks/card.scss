@@ -4,6 +4,7 @@
   position: relative;
   transition: all 0.3s ease 0s;
   width: 100%;
+  height: 386px;
   aspect-ratio: 260/386;
 
   @include vp-767 {
@@ -11,6 +12,8 @@
   }
 
   &:hover {
+    overflow: auto;
+
     &:before {
       opacity: 1;
     }
@@ -21,6 +24,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
     display: block;
     width: 100%;
     height: 100%;
@@ -112,12 +116,14 @@
 }
 
 .card:hover {
+
   &::before {
     opacity: 1;
   }
 
   .card__content {
     transform: translate( 0,0);
+    height: 100%;
   }
 
   dl {

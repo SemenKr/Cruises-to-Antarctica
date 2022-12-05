@@ -2,7 +2,7 @@ import {ScrollLock} from '../../utils/scroll-lock';
 
 const _scrollLock = new ScrollLock();
 
-const menuBtn = document.querySelector('.menu__button');
+const menuBtn = document.querySelector('.header__button');
 const menu = document.querySelector('.header__container');
 const menuOverlay = document.querySelector('.header__overlay');
 const menuLinks = document.querySelector('.header__menu').querySelectorAll('.menu__link');

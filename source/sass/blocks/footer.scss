@@ -5,6 +5,7 @@
 
   &__container {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 30px 40px;
     align-items: center;
