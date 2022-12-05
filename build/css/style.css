@@ -914,6 +914,7 @@ header__container._active:has(.header):before {
   margin-bottom: 30px;
   font-size: 54px;
   line-height: 1;
+  word-break: break-all;
 }
 
 .about p {
@@ -990,8 +991,9 @@ header__container._active:has(.header):before {
 }
 
 .menu {
-  position: relative;
-  overflow: hidden;
+  position: static;
+  max-width: 620px;
+  overflow: auto;
 }
 
 .menu__button {
@@ -1053,6 +1055,8 @@ header__container._active:has(.header):before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 10px 33px;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -1892,6 +1896,7 @@ header__container._active:has(.header):before {
   .menu {
     position: absolute;
     max-width: 250px;
+    overflow: hidden;
   }
 
   .menu__button {

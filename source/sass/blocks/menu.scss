@@ -1,10 +1,13 @@
 .menu {
-  position: relative;
-  overflow: hidden;
+  position: static;
+  max-width: 620px;
+  overflow: auto;
+
 
   @include vp-767 {
     position: absolute;
     max-width: 250px;
+    overflow: hidden;
   }
 
   &__button {
@@ -60,6 +63,7 @@
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px 33px;
     transition: all 0.3s ease 0s;
     transform-origin: right top;
