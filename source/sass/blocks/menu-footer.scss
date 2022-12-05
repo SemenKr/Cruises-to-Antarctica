@@ -12,8 +12,9 @@
     align-items: flex-start;
 
     @include vp-1023 {
-      gap: 17px 23px;
+      gap: 17px 25px;
       max-width: 420px;
+      min-width: 470px;
     }
 
     @include vp-767 {

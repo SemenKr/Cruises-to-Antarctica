@@ -70,9 +70,9 @@
     transform: translate( 6px,79%);
     transition: all 0.3s ease 0s;
 
-
     @include vp-1023 {
-      padding: 35px;
+      padding: 29px 36px;
+      transform: translate(0px,78%);
     }
 
     @include vp-767 {

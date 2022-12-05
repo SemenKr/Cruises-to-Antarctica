@@ -13,7 +13,8 @@
     padding: 50px 0;
 
     @include vp-1023 {
-
+      padding: 40px 0;
+      gap: 25px;
     }
 
     @include vp-767 {

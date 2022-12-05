@@ -1297,7 +1297,7 @@ header__container._active:has(.header):before {
   background-color: #011c40;
   padding: 44px 50px 52px 50px;
   color: #f9fbfd;
-  min-width: 270px;
+  width: 403px;
 }
 
 .form h3 {
@@ -1306,6 +1306,7 @@ header__container._active:has(.header):before {
   line-height: 1.5;
   margin: 0;
   margin-bottom: 28px;
+  text-align: left;
 }
 
 .form .form__input-wrapper input {
@@ -1716,12 +1717,20 @@ header__container._active:has(.header):before {
   }
 
   .feature-card {
-    padding: 26px 20px 25px 20px;
+    padding: 23px 5px 25px 20px;
   }
 
   .feature-card__img {
-    margin-bottom: 24px;
+    margin-bottom: 15px;
     width: 36px;
+  }
+
+  .feature-card__img--ship {
+    width: 21px;
+  }
+
+  .feature-card__img--inclusive {
+    width: 27px;
   }
 
   .feature-card h3 {
@@ -1738,12 +1747,12 @@ header__container._active:has(.header):before {
   }
 
   .catalog {
-    padding-top: 100px;
+    padding-top: 88px;
     padding-bottom: 100px;
   }
 
   .catalog h2 {
-    margin-bottom: 40px;
+    margin-bottom: 49px;
     font-size: 26px;
   }
 
@@ -1753,7 +1762,10 @@ header__container._active:has(.header):before {
   }
 
   .card__content {
-    padding: 35px;
+    padding: 29px 36px;
+    -webkit-transform: translate(0px, 78%);
+    -ms-transform: translate(0px, 78%);
+    transform: translate(0px, 78%);
   }
 
   .booking {
@@ -1770,30 +1782,57 @@ header__container._active:has(.header):before {
     -ms-flex-align: center;
     align-items: center;
     text-align: center;
-    row-gap: 60px;
-    padding-left: 138px;
-    padding-right: 138px;
+    row-gap: 53px;
+    padding: 0;
   }
 
   .booking h2 {
     font-size: 34px;
-    margin-bottom: 20px;
+    margin-bottom: 3px;
     white-space: normal;
   }
 
+  .booking h2 br {
+    display: none;
+  }
+
+  .booking__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form .form__input-wrapper input {
+    margin-bottom: 23px;
+  }
+
   .contacts__container {
-    padding: 100px 0;
+    padding: 100px 0 98px;
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
     column-gap: 30px;
+  }
+
+  .address p {
+    margin: -3px 0 25px;
   }
 
   .map {
     min-height: 335px;
   }
 
+  .footer__container {
+    padding: 40px 0;
+    gap: 25px;
+  }
+
   .social__list {
-    gap: 20px 23px;
+    gap: 20px 19px;
   }
 
   .social svg {
@@ -1801,8 +1840,9 @@ header__container._active:has(.header):before {
   }
 
   .menu-footer__list {
-    gap: 17px 23px;
+    gap: 17px 25px;
     max-width: 420px;
+    min-width: 470px;
   }
 
   .menu-footer a {
