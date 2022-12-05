@@ -2080,6 +2080,7 @@ header__container._active:has(.header):before {
 
   .form {
     padding: 30px;
+    max-width: 290px;
   }
 
   .form h3 {
@@ -2123,6 +2124,7 @@ header__container._active:has(.header):before {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    min-width: 270px;
   }
 
   .adventure {
