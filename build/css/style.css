@@ -807,6 +807,7 @@ button,
 
 .header__menu {
   margin-top: 8px;
+  overflow: hidden;
 }
 
 .header__button {
@@ -975,12 +976,12 @@ button,
   font-size: 54px;
   line-height: 1;
   word-break: break-all;
-  padding-left: 54px;
+  padding-left: 50px;
 }
 
 .about p {
   margin: 0;
-  padding-left: 60px;
+  padding-left: 50px;
   font-weight: 400;
   font-size: 20px;
   line-height: 1;
@@ -1063,7 +1064,7 @@ button,
 .menu {
   position: static;
   max-width: 620px;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .menu__list {
@@ -1466,7 +1467,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 25px;
+  gap: 21px;
 }
 
 .address__link {
@@ -1985,6 +1986,7 @@ button,
     -ms-transform: translateX(0);
     transform: translateX(0);
     top: 0;
+    overflow: hidden;
   }
 
   .logo {
