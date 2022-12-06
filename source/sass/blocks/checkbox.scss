@@ -5,12 +5,18 @@
     color: $color-default-white;
     background-color: inherit;
     display: flex;
+    align-items: center;
     grid-template-columns: 18px auto;
     gap: 5px;
 
     &:hover {
       text-decoration: underline;
       opacity: 0.9;
+    }
+
+    @include vp-767 {
+      text-align: left;
+      gap: 9px;
     }
   }
 
@@ -26,6 +32,11 @@
     display: grid;
     place-content: center;
     transform: translateY(-3px);
+    flex: 0 0 18px;
+
+    @include vp-767 {
+    transform: translateY(-1px);
+    }
 
     &:focus-within {
       outline: 3px solid $color-default-white;

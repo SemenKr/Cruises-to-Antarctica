@@ -10,7 +10,15 @@
   }
 
   @include vp-767 {
-    padding: 25px 20px 25px 20px;
+    padding: 23px 22px 21px 20px;
+  }
+
+  br {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+    }
   }
 
   &__img {
@@ -23,7 +31,7 @@
     }
 
     @include vp-767 {
-      margin-bottom: 25px;
+      margin-bottom: 15px;
     }
 
   }
@@ -53,6 +61,10 @@
 
     @include vp-1023 {
       line-height: 1.4;
+    }
+
+    @include vp-767 {
+      padding-right: 50px;
     }
   }
 
