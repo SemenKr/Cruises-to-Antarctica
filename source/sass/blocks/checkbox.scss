@@ -35,7 +35,7 @@
     flex: 0 0 18px;
 
     @include vp-767 {
-    transform: translateY(-1px);
+      transform: translateY(-1px);
     }
 
     &:focus-within {
@@ -66,5 +66,4 @@
   input[type="checkbox"]:disabled {
     opacity: 0.5;
   }
-
 }

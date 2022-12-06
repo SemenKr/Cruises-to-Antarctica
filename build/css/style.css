@@ -674,16 +674,16 @@ button,
 }
 
 .btn.focus-visible:focus {
-  -webkit-box-shadow: 3px 5px 5px 2px rgba(201, 201, 201, 0.5);
-  box-shadow: 3px 5px 5px 2px rgba(201, 201, 201, 0.5);
+  -webkit-box-shadow: 3px 5px 5px 2px rgba(201, 201, 201, 0.5019607843);
+  box-shadow: 3px 5px 5px 2px rgba(201, 201, 201, 0.5019607843);
 }
 
 .btn:active {
   -webkit-transform: translateY(1px);
   -ms-transform: translateY(1px);
   transform: translateY(1px);
-  -webkit-box-shadow: inset 0px 5px 5px 2px rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0px 5px 5px 2px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: inset 0 5px 5px 2px rgba(0, 0, 0, 0.2509803922);
+  box-shadow: inset 0 5px 5px 2px rgba(0, 0, 0, 0.2509803922);
 }
 
 .modal {
@@ -917,7 +917,7 @@ button,
   width: 0;
 }
 
-header__container._active:has(.header):before {
+.header__container._active:has(.header)::before {
   content: "";
   position: absolute;
   top: 0;
@@ -959,8 +959,7 @@ header__container._active:has(.header):before {
   padding-bottom: 278px;
   padding-left: 95px;
   padding-right: 50px;
-  background-color: #00306b;
-  background: center bottom/cover no-repeat url("../img/background.webp");
+  background: #00306b center bottom/cover no-repeat url("../img/background.webp");
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -976,7 +975,7 @@ header__container._active:has(.header):before {
   font-size: 54px;
   line-height: 1;
   word-break: break-all;
-  padding-left: 60px;
+  padding-left: 54px;
 }
 
 .about p {
@@ -1142,11 +1141,18 @@ header__container._active:has(.header):before {
   aspect-ratio: 260/386;
 }
 
-.card:hover {
-  overflow: auto;
+.card:hover::before {
+  opacity: 1;
 }
 
-.card:hover:before {
+.card:hover .card__content {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  height: 100%;
+}
+
+.card:hover dl {
   opacity: 1;
 }
 
@@ -1187,9 +1193,9 @@ header__container._active:has(.header):before {
   position: absolute;
   left: 0;
   bottom: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(1, 28, 64, 0)), to(#011C40));
-  background: -o-linear-gradient(rgba(1, 28, 64, 0) 0%, #011C40 100%);
-  background: linear-gradient(rgba(1, 28, 64, 0) 0%, #011C40 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(1, 28, 64, 0)), to(#011c40));
+  background: -o-linear-gradient(rgba(1, 28, 64, 0) 0%, #011c40 100%);
+  background: linear-gradient(rgba(1, 28, 64, 0) 0%, #011c40 100%);
 }
 
 .card__content {
@@ -1238,21 +1244,6 @@ header__container._active:has(.header):before {
 
 .card__button {
   margin-top: 12px;
-}
-
-.card:hover::before {
-  opacity: 1;
-}
-
-.card:hover .card__content {
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
-  height: 100%;
-}
-
-.card:hover dl {
-  opacity: 1;
 }
 
 .booking {
@@ -1453,7 +1444,7 @@ header__container._active:has(.header):before {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.5;
-  margin: 0px 0 29px;
+  margin: 0 0 29px;
 }
 
 .address a {
@@ -1567,7 +1558,7 @@ header__container._active:has(.header):before {
 
 .social a:hover {
   opacity: 0.8;
-  color: #DBD053;
+  color: #dbd053;
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
@@ -1609,7 +1600,7 @@ header__container._active:has(.header):before {
 
 .menu-footer a:hover {
   text-decoration: underline;
-  color: #DBD053;
+  color: #dbd053;
 }
 
 .adventure {
@@ -1788,9 +1779,9 @@ header__container._active:has(.header):before {
 
   .card__content {
     padding: 29px 36px;
-    -webkit-transform: translate(0px, 78%);
-    -ms-transform: translate(0px, 78%);
-    transform: translate(0px, 78%);
+    -webkit-transform: translate(0, 78%);
+    -ms-transform: translate(0, 78%);
+    transform: translate(0, 78%);
   }
 
   .booking {
@@ -1990,9 +1981,9 @@ header__container._active:has(.header):before {
     padding-top: 57px;
     padding-left: 20px;
     gap: 26px;
-    -webkit-transform: translateX(0px);
-    -ms-transform: translateX(0px);
-    transform: translateX(0px);
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
     top: 0;
   }
 
@@ -2115,9 +2106,9 @@ header__container._active:has(.header):before {
 
   .card__content {
     padding: 29px 25px;
-    -webkit-transform: translate(0px, 81%);
-    -ms-transform: translate(0px, 81%);
-    transform: translate(0px, 81%);
+    -webkit-transform: translate(0, 81%);
+    -ms-transform: translate(0, 81%);
+    transform: translate(0, 81%);
   }
 
   .booking {
@@ -2237,7 +2228,7 @@ header__container._active:has(.header):before {
 
   .adventure h2 {
     font-size: 24px;
-    margin-bottom: 154x;
+    margin-bottom: 154px;
   }
 }
 
@@ -2257,8 +2248,8 @@ header__container._active:has(.header):before {
 
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
-    -webkit-box-shadow: 3px 5px 5px 2px rgba(201, 201, 201, 0.5);
-    box-shadow: 3px 5px 5px 2px rgba(201, 201, 201, 0.5);
+    -webkit-box-shadow: 3px 5px 5px 2px rgba(201, 201, 201, 0.5019607843);
+    box-shadow: 3px 5px 5px 2px rgba(201, 201, 201, 0.5019607843);
   }
 
   .menu__item a:hover:not(.focus-visible) {
