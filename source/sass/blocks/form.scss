@@ -76,12 +76,3 @@
     margin-top: -2px;
   }
 }
-
-.form__checkbox {
-  margin-top: 2px;
-  margin-bottom: 28px;
-
-  @include vp-767 {
-    margin-top: -2px;
-  }
-}
