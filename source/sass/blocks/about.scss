@@ -5,8 +5,7 @@
   padding-bottom: 278px;
   padding-left: 95px;
   padding-right: 50px;
-  background-color: $color-bg-support;
-  background: center bottom / cover no-repeat url("../img/background.webp");
+  background: $color-bg-support center bottom / cover no-repeat url("../img/background.webp");
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
   @include retina {
