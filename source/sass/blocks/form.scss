@@ -28,7 +28,7 @@
     }
   }
 
-  .form__input-wrapper input {
+  input:not([type="checkbox"]) {
     width: 100%;
     padding: 11px;
     border: none;

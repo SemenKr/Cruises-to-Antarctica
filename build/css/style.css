@@ -1308,7 +1308,7 @@ button,
   text-align: left;
 }
 
-.form .form__input-wrapper input {
+.form input:not([type=checkbox]) {
   width: 100%;
   padding: 11px;
   border: none;
@@ -1319,17 +1319,17 @@ button,
   margin-bottom: 22px;
 }
 
-.form .form__input-wrapper input:hover {
+.form input:not([type=checkbox]):hover {
   outline: 3px solid #f9fbfd;
   opacity: 0.9;
 }
 
-.form .form__input-wrapper input:focus {
+.form input:not([type=checkbox]):focus {
   outline: 3px solid #f9fbfd;
   border: none;
 }
 
-.form .form__input-wrapper input:active {
+.form input:not([type=checkbox]):active {
   outline: 3px solid #f9fbfd;
   opacity: 0.7;
   border: none;
@@ -1828,7 +1828,7 @@ button,
     padding: 44px 50px 52px 50px;
   }
 
-  .form .form__input-wrapper input {
+  .form input:not([type=checkbox]) {
     margin-bottom: 23px;
   }
 
@@ -1913,7 +1913,7 @@ button,
 }
 
 @media (max-width: 1023px) and (max-width: 767px) {
-  .form .form__input-wrapper input {
+  .form input:not([type=checkbox]) {
     margin-bottom: 22px;
   }
 }
