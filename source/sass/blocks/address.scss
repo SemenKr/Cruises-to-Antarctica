@@ -19,18 +19,6 @@
     }
   }
 
-  &__link-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 21px;
-  }
-
-  &__link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
   svg {
     flex: 0 0 18px;
 
@@ -42,4 +30,17 @@
       transform: translateY(-4px);
     }
   }
+}
+
+
+.address__link-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.address__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

@@ -41,51 +41,6 @@
     transition: all 0.3s ease 0s;
   }
 
-  &__preview,
-  img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    object-fit: cover;
-  }
-
-  &__preview {
-    &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 50%;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      background: linear-gradient(#011c4000 0%, #011c40 100%);
-    }
-  }
-
-  &__content {
-    position: absolute;
-    color: $color-text-light;
-    padding: 29px 24px 25px 26px;
-    height: 100%;
-    width: 100%;
-    z-index: 3;
-    transform: translate(6px, 79%);
-    transition: all 0.3s ease 0s;
-
-    @include vp-1023 {
-      padding: 29px 36px;
-      transform: translate(0, 78%);
-    }
-
-    @include vp-767 {
-      padding: 29px 25px;
-      transform: translate(0, 81%);
-    }
-  }
-
   h3 {
     font-weight: 500;
     font-size: 18px;
@@ -114,8 +69,54 @@
     margin: 0;
     margin-bottom: 12px;
   }
+}
 
-  &__button {
-    margin-top: 12px;
+
+.card__preview,
+img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  object-fit: cover;
+}
+
+.card__preview {
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(#011c4000 0%, #011c40 100%);
   }
+}
+
+.card__content {
+  position: absolute;
+  color: $color-text-light;
+  padding: 29px 24px 25px 26px;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  transform: translate(6px, 79%);
+  transition: all 0.3s ease 0s;
+
+  @include vp-1023 {
+    padding: 29px 36px;
+    transform: translate(0, 78%);
+  }
+
+  @include vp-767 {
+    padding: 29px 25px;
+    transform: translate(0, 81%);
+  }
+}
+
+.card__button {
+  margin-top: 12px;
 }

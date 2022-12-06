@@ -1,24 +1,4 @@
 .social {
-  &__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-top: 8px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px 23px;
-    max-width: 120px;
-
-    @include vp-1023 {
-      gap: 20px 19px;
-    }
-
-    @include vp-767 {
-      gap: 20px 18px;
-      margin-left: -4px;
-    }
-  }
-
   a {
     color: inherit;
     padding: 1px;
@@ -42,5 +22,25 @@
     @include vp-1023 {
       width: 16px;
     }
+  }
+}
+
+.social__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 23px;
+  max-width: 120px;
+
+  @include vp-1023 {
+    gap: 20px 19px;
+  }
+
+  @include vp-767 {
+    gap: 20px 18px;
+    margin-left: -4px;
   }
 }

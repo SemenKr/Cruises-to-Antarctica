@@ -10,15 +10,15 @@
   @include vp-767 {
     min-height: 316px;
   }
+}
 
-  &__hint {
-    background-color: $color-default-white;
-    padding: 5px;
-  }
+.map__hint {
+  background-color: $color-default-white;
+  padding: 5px;
+}
 
-  &__balloon {
-    background-color: $color-default-white;
-    padding: 5px;
-    display: block;
-  }
+.map__balloon {
+  background-color: $color-default-white;
+  padding: 5px;
+  display: block;
 }
