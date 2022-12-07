@@ -12,9 +12,10 @@
   <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./img/backgroundmobile@2.webp" as="image">
   <link rel="icon" href="./img/favicon/favicon.ico" sizes="any">
   <link rel="icon" href="./img/favicon/32.png" type="image/svg+xml">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="css/style.min.css" as="style" onload="this.rel='stylesheet'">
 </head>
 
 <body>
@@ -23,7 +24,7 @@
       <div class="header__overlay"></div>
       <div class="container">
         <div class="header__container">
-          <button type="submit" class="header__button" tabindex="0"><span></span></button>
+          <button type="submit" class="header__button" tabindex="0"><span></span><span class="visually-hidden">Меню</span></button>
           <div class="header__logo logo">
             <a class="logo__link" href="#">
               <svg class="logo__img" width="70" height="38" viewBox="0 0 70 38">
@@ -315,7 +316,7 @@
               <div class="form__checkbox checkbox">
                 <label>
                   <input type="checkbox" name="agreement" required>
-                  Я согласен на обработку персональных данных </label>
+                  Я согласен на обработку моих персональных данных </label>
               </div>
               <button class="form__button btn" type="submit">Оставить заявку</button>
             </form>

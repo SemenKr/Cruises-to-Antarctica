@@ -1431,7 +1431,7 @@ button,
   display: grid;
   -ms-grid-columns: 48% 1fr;
   grid-template-columns: 48% 1fr;
-  padding: 120px 0 120px;
+  padding: 120px 0 91px;
   -webkit-column-gap: 103px;
   -moz-column-gap: 103px;
   column-gap: 103px;
@@ -1444,7 +1444,7 @@ button,
   font-weight: 500;
   font-size: 18px;
   line-height: 1.5;
-  margin: 0 0 29px;
+  margin: -34px 0 29px;
 }
 
 .address a {
@@ -1824,11 +1824,22 @@ button,
   }
 
   .form {
-    padding: 44px 50px 52px 50px;
+    padding: 44px 50px 50px 50px;
   }
 
   .form input:not([type=checkbox]) {
     margin-bottom: 23px;
+  }
+
+  .form__checkbox {
+    margin-top: -3px;
+    margin-bottom: 33px;
+  }
+
+  .checkbox input {
+    -webkit-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    transform: translateY(1px);
   }
 
   .contacts__container {
@@ -2113,7 +2124,7 @@ button,
   }
 
   .booking {
-    padding: 70px 0 71px;
+    padding: 70px 0 65px;
     background: center bottom/cover no-repeat #def4fd url("../../img/background-form-mobile.webp");
   }
 
@@ -2139,7 +2150,7 @@ button,
   }
 
   .form {
-    padding: 35px 30px;
+    padding: 35px 30px 41px;
     max-width: 290px;
   }
 
@@ -2167,7 +2178,7 @@ button,
   .contacts__container {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    padding: 60px 0 64px;
+    padding: 60px 0 69px;
     row-gap: 35px;
   }
 
