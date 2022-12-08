@@ -1247,7 +1247,7 @@ button,
 }
 
 .booking {
-  background: center bottom/cover no-repeat #def4fd url("../../img/background-form.webp");
+  background: center bottom/cover no-repeat #def4fd url("../img/background-form.webp");
   padding: 50px 0 50px;
 }
 
@@ -1786,7 +1786,7 @@ button,
 
   .booking {
     padding: 100px 0;
-    background: center bottom/cover no-repeat #def4fd url("../../img/background-form-tablet.webp");
+    background: center bottom/cover no-repeat #def4fd url("../img/background-form-tablet.webp");
   }
 
   .booking h2 {
@@ -1918,7 +1918,7 @@ button,
   }
 
   .booking {
-    background: center bottom/cover no-repeat #def4fd url("../../img/background-form-tablet@2.webp");
+    background: center bottom/cover no-repeat #def4fd url("../img/background-form-tablet@2.webp");
   }
 }
 
@@ -2124,8 +2124,8 @@ button,
   }
 
   .booking {
-    padding: 70px 0 65px;
-    background: center bottom/cover no-repeat #def4fd url("../../img/background-form-mobile.webp");
+    padding: 70px 0 71px;
+    background: center bottom/cover no-repeat #def4fd url("../img/background-form-mobile.webp");
   }
 
   .booking h2 {
@@ -2254,7 +2254,7 @@ button,
   }
 
   .booking {
-    background: center bottom/cover no-repeat #def4fd url("../../img/background-form-mobile@2.webp");
+    background: center bottom/cover no-repeat #def4fd url("../img/background-form-mobile@2.webp");
   }
 }
 
@@ -2280,6 +2280,6 @@ button,
   }
 
   .booking {
-    background: center bottom/cover no-repeat #def4fd url("../../img/background-form@2.webp");
+    background: center bottom/cover no-repeat #def4fd url("../img/background-form@2.webp");
   }
 }
