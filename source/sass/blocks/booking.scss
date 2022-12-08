@@ -16,13 +16,9 @@
   }
 
   @include vp-767 {
-<<<<<<< HEAD
-    padding: 70px 0 65px;
-    background: center bottom/cover no-repeat #def4fd url("../../img/background-form-mobile.webp");
-=======
     padding: 70px 0 71px;
     background: center bottom/cover no-repeat #def4fd url("../img/background-form-mobile.webp");
->>>>>>> 9d1acd2 (fix path background form)
+
 
     @include retina {
       background: center bottom/cover no-repeat #def4fd url("../img/background-form-mobile@2.webp");
