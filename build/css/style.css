@@ -976,7 +976,7 @@ button,
   font-size: 54px;
   line-height: 1;
   word-break: break-all;
-  padding-left: 50px;
+  padding-left: 58px;
 }
 
 .about p {
@@ -1785,7 +1785,7 @@ button,
   }
 
   .booking {
-    padding: 100px 0;
+    padding: 100px 0 99px;
     background: center bottom/cover no-repeat #def4fd url("../img/background-form-tablet.webp");
   }
 
@@ -1833,7 +1833,7 @@ button,
 
   .form__checkbox {
     margin-top: -3px;
-    margin-bottom: 33px;
+    margin-bottom: 32px;
   }
 
   .checkbox input {
@@ -1843,7 +1843,7 @@ button,
   }
 
   .contacts__container {
-    padding: 100px 0 98px;
+    padding: 100px 0 100px;
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
     column-gap: 30px;
@@ -2124,7 +2124,7 @@ button,
   }
 
   .booking {
-    padding: 70px 0 71px;
+    padding: 70px 0 66px;
     background: center bottom/cover no-repeat #def4fd url("../img/background-form-mobile.webp");
   }
 
@@ -2162,6 +2162,7 @@ button,
 
   .form__checkbox {
     margin-top: -2px;
+    margin-bottom: 27px;
   }
 
   .checkbox label {
