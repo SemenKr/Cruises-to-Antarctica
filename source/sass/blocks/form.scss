@@ -36,6 +36,7 @@
     transition: outline 0.3s ease 0s, opacity 0.3s ease 0s;
     margin-bottom: 22px;
 
+
     @include vp-1023 {
       margin-bottom: 23px;
 
@@ -71,6 +72,7 @@
 .form__checkbox {
   margin-top: 2px;
   margin-bottom: 28px;
+  cursor: pointer;
 
   @include vp-1023 {
     margin-top: -3px;
@@ -80,5 +82,12 @@
   @include vp-767 {
     margin-top: -2px;
     margin-bottom: 27px;
+  }
+
+
+
+  label,
+  input {
+    cursor: pointer;
   }
 }

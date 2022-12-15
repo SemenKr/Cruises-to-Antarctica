@@ -1066,7 +1066,7 @@ button,
 
 .menu__list {
   list-style: none;
-  padding: 0;
+  padding: 5px;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1338,6 +1338,12 @@ button,
 .form__checkbox {
   margin-top: 2px;
   margin-bottom: 28px;
+  cursor: pointer;
+}
+
+.form__checkbox label,
+.form__checkbox input {
+  cursor: pointer;
 }
 
 .checkbox label {
