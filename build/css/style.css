@@ -428,6 +428,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -1978,14 +1979,17 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-top: 57px;
+    padding-top: 17px;
     padding-left: 20px;
     gap: 26px;
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
     top: 0;
-    overflow: hidden;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    height: 90vh;
   }
 
   .logo {
@@ -2067,7 +2071,7 @@ button,
   .menu {
     position: absolute;
     max-width: 250px;
-    overflow: hidden;
+    margin-top: 40px;
   }
 
   .menu__list {

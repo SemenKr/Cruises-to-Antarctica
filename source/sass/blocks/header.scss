@@ -113,12 +113,14 @@
 .header__container._active .menu__list {
   @include vp-767 {
     flex-direction: column;
-    padding-top: 57px;
+    padding-top: 17px;
     padding-left: 20px;
     gap: 26px;
     transform: translateX(0);
     top: 0;
-    overflow: hidden;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    height: 90vh;
   }
 }
 

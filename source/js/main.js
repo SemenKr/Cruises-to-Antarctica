@@ -1,7 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initBurger} from './modules/menu/menu.js';
-// import {initMap} from './modules/map/map.js';
+import {smoothScroll} from './utils/smooth-scroll.js';
 
 // ---------------------------------
 
@@ -11,6 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  smoothScroll();
 
 
   // Modules
