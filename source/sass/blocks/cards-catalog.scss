@@ -1,12 +1,6 @@
 .cards-catalog {
   padding: 0 15px;
 
-  @include vp-767 {
-    padding: 0 10px;
-  }
-}
-
-.cards-catalog__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
@@ -20,5 +14,9 @@
 
   @include vp-767 {
     grid-template-columns: repeat(1, 1fr);
+    padding: 0 10px;
+  }
+  @include vp-767 {
+
   }
 }

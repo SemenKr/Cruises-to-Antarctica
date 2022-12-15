@@ -3,15 +3,16 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 1.5;
-    margin: -34px 0 29px;
+    margin: 0;
+
 
     @include vp-1023 {
-      margin: -3px 0 25px;
+
     }
   }
 
   a {
-    transition: all 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s;
 
     &:hover {
       opacity: 0.5;

@@ -656,9 +656,11 @@ button,
   font-weight: 600;
   font-size: 14px;
   line-height: 1.5;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: -webkit-box-shadow 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  transition: -webkit-box-shadow 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  -o-transition: box-shadow 0.3s ease 0s, transform 0.3s ease 0s;
+  transition: box-shadow 0.3s ease 0s, transform 0.3s ease 0s;
+  transition: box-shadow 0.3s ease 0s, transform 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   background-color: #f9fbfd;
   border: none;
   cursor: pointer;
@@ -824,9 +826,11 @@ button,
   height: 12px;
   background-color: inherit;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: opacity 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, opacity 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 
 .header__button:hover {
@@ -844,9 +848,11 @@ button,
   width: 100%;
   height: 2px;
   background-color: #f9fbfd;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: opacity 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, opacity 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   right: 0;
 }
 
@@ -863,9 +869,6 @@ button,
 }
 
 .header__container {
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
   -webkit-transform-origin: right top;
   -ms-transform-origin: right top;
   transform-origin: right top;
@@ -883,9 +886,11 @@ button,
 }
 
 .header__container._active {
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   -webkit-transform-origin: right;
   -ms-transform-origin: right;
   transform-origin: right;
@@ -933,19 +938,10 @@ button,
 
 .logo__link {
   display: block;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.logo {
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
 }
 
 .logo__link {
-  color: inherit;
+  color: #f9fbfd;
 }
 
 .logo__img {
@@ -1077,9 +1073,11 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 10px 22px;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   -webkit-transform-origin: right top;
   -ms-transform-origin: right top;
   transform-origin: right top;
@@ -1088,9 +1086,9 @@ button,
 .menu__item a {
   color: inherit;
   padding: 5px;
-  -webkit-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  -webkit-transition: opacity 0.5s ease 0s;
+  -o-transition: opacity 0.5s ease 0s;
+  transition: opacity 0.5s ease 0s;
   border: none;
   border-radius: 3px;
   font-size: 16px;
@@ -1117,9 +1115,6 @@ button,
 
 .cards-catalog {
   padding: 0 15px;
-}
-
-.cards-catalog__list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -1134,9 +1129,9 @@ button,
   overflow: hidden;
   background-color: #011c40;
   position: relative;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
   width: 100%;
   height: 386px;
   aspect-ratio: 260/386;
@@ -1169,9 +1164,9 @@ button,
   background: #011c40;
   opacity: 0;
   z-index: 2;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
 }
 
 .card h3 {
@@ -1237,9 +1232,11 @@ button,
   -webkit-transform: translate(6px, 79%);
   -ms-transform: translate(6px, 79%);
   transform: translate(6px, 79%);
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 
 .card__button {
@@ -1312,9 +1309,9 @@ button,
   padding: 11px;
   border: none;
   padding-left: 16px;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: outline 0.3s ease 0s, opacity 0.3s ease 0s;
+  -o-transition: outline 0.3s ease 0s, opacity 0.3s ease 0s;
+  transition: outline 0.3s ease 0s, opacity 0.3s ease 0s;
   margin-bottom: 22px;
 }
 
@@ -1337,9 +1334,9 @@ button,
 .form .form__input-wrapper {
   width: 100%;
   position: relative;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: outline 0.3s ease 0s;
+  -o-transition: outline 0.3s ease 0s;
+  transition: outline 0.3s ease 0s;
 }
 
 .form__checkbox {
@@ -1404,9 +1401,11 @@ button,
   -webkit-transform-origin: bottom left;
   -ms-transform-origin: bottom left;
   transform-origin: bottom left;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   color: #011c40;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath stroke='currentColor' d='M1 2.5 5.286 7 11 1'/%3E%3C/svg%3E");
 }
@@ -1435,22 +1434,19 @@ button,
   -webkit-column-gap: 103px;
   -moz-column-gap: 103px;
   column-gap: 103px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .address p {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.5;
-  margin: -34px 0 29px;
+  margin: 0;
 }
 
 .address a {
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
 }
 
 .address a:hover {
@@ -1491,17 +1487,12 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: center/contain no-repeat url("../img/map.webp");
 }
 
-.map__hint {
-  background-color: #f9fbfd;
-  padding: 5px;
-}
-
-.map__balloon {
-  background-color: #f9fbfd;
-  padding: 5px;
-  display: block;
+.map iframe {
+  width: 100%;
+  height: auto;
 }
 
 .footer {
@@ -1537,9 +1528,9 @@ button,
   display: -ms-grid;
   display: grid;
   place-content: center;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: color 0.3s ease 0s, opacity 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s, opacity 0.3s ease 0s;
+  transition: color 0.3s ease 0s, opacity 0.3s ease 0s;
 }
 
 .social a:hover {
@@ -1576,9 +1567,9 @@ button,
   padding: 3px 0;
   font-size: 16px;
   line-height: 1;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
 }
 
 .menu-footer a:hover {
@@ -1772,7 +1763,7 @@ button,
     font-size: 26px;
   }
 
-  .cards-catalog__list {
+  .cards-catalog {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1847,10 +1838,6 @@ button,
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
     column-gap: 30px;
-  }
-
-  .address p {
-    margin: -3px 0 25px;
   }
 
   .address svg {
@@ -2009,6 +1996,10 @@ button,
     position: static;
   }
 
+  .logo__link {
+    color: inherit;
+  }
+
   .logo__img {
     width: 42px;
     height: 22px;
@@ -2104,12 +2095,9 @@ button,
   }
 
   .cards-catalog {
-    padding: 0 10px;
-  }
-
-  .cards-catalog__list {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
+    padding: 0 10px;
   }
 
   .card {

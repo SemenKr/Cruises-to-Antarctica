@@ -2,7 +2,7 @@
   overflow: hidden;
   background-color: $color-bg-dark;
   position: relative;
-  transition: all 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
   width: 100%;
   height: 386px;
   aspect-ratio: 260/386;
@@ -38,7 +38,7 @@
     background: $color-bg-dark;
     opacity: 0;
     z-index: 2;
-    transition: all 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s;
   }
 
   h3 {
@@ -103,7 +103,7 @@
   width: 100%;
   z-index: 3;
   transform: translate(6px, 79%);
-  transition: all 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
 
   @include vp-1023 {
     padding: 29px 36px;
