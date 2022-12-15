@@ -992,7 +992,7 @@ button,
 .features h2 {
   text-align: center;
   margin: 0;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 28px;
   line-height: 1.5;
 }
@@ -1109,7 +1109,7 @@ button,
   margin: 0;
   margin-bottom: 49px;
   text-align: center;
-  font-size: 29px;
+  font-size: 28px;
   line-height: 1.5;
 }
 
@@ -1443,7 +1443,14 @@ button,
   margin: 0;
 }
 
+.address address {
+  font-style: normal;
+}
+
 .address a {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
   -webkit-transition: opacity 0.3s ease 0s;
   -o-transition: opacity 0.3s ease 0s;
   transition: opacity 0.3s ease 0s;
