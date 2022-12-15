@@ -1133,8 +1133,7 @@ button,
   -o-transition: opacity 0.3s ease 0s;
   transition: opacity 0.3s ease 0s;
   width: 100%;
-  height: 386px;
-  aspect-ratio: 260/386;
+  aspect-ratio: auto 260/386;
 }
 
 .card:hover::before {
@@ -1175,6 +1174,7 @@ button,
   line-height: 1.5;
   margin: 0;
   margin-bottom: 14px;
+  white-space: nowrap;
 }
 
 .card dl {
@@ -1202,11 +1202,6 @@ button,
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 
 .card__preview::after {

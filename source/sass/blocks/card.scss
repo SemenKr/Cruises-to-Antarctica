@@ -4,8 +4,7 @@
   position: relative;
   transition: opacity 0.3s ease 0s;
   width: 100%;
-  height: 386px;
-  aspect-ratio: 260/386;
+  aspect-ratio: auto 260/386;
 
   @include vp-767 {
     aspect-ratio: 270/386;
@@ -47,6 +46,7 @@
     line-height: 1.5;
     margin: 0;
     margin-bottom: 14px;
+    white-space: nowrap;
   }
 
   dl {
@@ -76,10 +76,6 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  object-fit: cover;
 }
 
 .card__preview {
