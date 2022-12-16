@@ -662,6 +662,7 @@ button,
   -o-transition: box-shadow 0.3s ease 0s, transform 0.3s ease 0s;
   transition: box-shadow 0.3s ease 0s, transform 0.3s ease 0s;
   transition: box-shadow 0.3s ease 0s, transform 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  color: #011c40;
   background-color: #f9fbfd;
   border: none;
   cursor: pointer;
@@ -677,8 +678,8 @@ button,
 }
 
 .btn.focus-visible:focus {
-  -webkit-box-shadow: 3px 5px 5px 2px rgba(201, 201, 201, 0.5019607843);
-  box-shadow: 3px 5px 5px 2px rgba(201, 201, 201, 0.5019607843);
+  -webkit-box-shadow: 0 0 5px 5px rgba(201, 201, 201, 0.5019607843);
+  box-shadow: 0 0 5px 5px rgba(201, 201, 201, 0.5019607843);
 }
 
 .btn:active {
@@ -1127,68 +1128,61 @@ button,
 }
 
 .card {
-  overflow: hidden;
-  background-color: #011c40;
   position: relative;
-  -webkit-transition: opacity 0.3s ease 0s;
-  -o-transition: opacity 0.3s ease 0s;
-  transition: opacity 0.3s ease 0s;
+  color: #f9fbfd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   width: 100%;
-  aspect-ratio: auto 260/386;
-}
-
-.card:hover::before {
-  opacity: 1;
-}
-
-.card:hover .card__content {
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
-  height: 100%;
-}
-
-.card:hover dl {
-  opacity: 1;
+  aspect-ratio: 260/386;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .card::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
   bottom: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: #011c40;
+  left: 0;
+  right: 0;
+  background-color: #00306b;
   opacity: 0;
-  z-index: 2;
-  -webkit-transition: opacity 0.3s ease 0s;
-  -o-transition: opacity 0.3s ease 0s;
-  transition: opacity 0.3s ease 0s;
 }
 
 .card h3 {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.5;
+  color: #f9fbfd;
   margin: 0;
-  margin-bottom: 14px;
-  white-space: nowrap;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  margin-left: 30px;
+  margin-bottom: 23px;
 }
 
-.card dl {
+.card p {
+  padding: 0;
   margin: 0;
-  opacity: 0;
+  color: #f9fbfd;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 
 .card dt {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.4;
-  margin: 0;
-  margin-bottom: 1px;
 }
 
 .card dd {
@@ -1196,13 +1190,21 @@ button,
   font-size: 14px;
   line-height: 1.4;
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .card__preview img {
   width: 100%;
-  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.card__preview {
+  z-index: -1;
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .card__preview::after {
@@ -1219,24 +1221,80 @@ button,
 }
 
 .card__content {
-  position: absolute;
   color: #f9fbfd;
-  padding: 29px 24px 25px 26px;
-  height: 100%;
-  width: 100%;
-  z-index: 3;
-  -webkit-transform: translate(6px, 79%);
-  -ms-transform: translate(6px, 79%);
-  transform: translate(6px, 79%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 35px 25px;
+  padding-right: 15px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  background-color: #00306b;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
   -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  -webkit-transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  transform-origin: bottom;
 }
 
-.card__button {
-  margin-top: 12px;
+.card__content dl::-webkit-scrollbar {
+  display: none;
+}
+
+.card__content dl {
+  margin: 0;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.card:hover h3,
+.card:focus h3,
+.card:focus-visible h3 {
+  opacity: 0;
+}
+
+.card:hover::before,
+.card:focus::before,
+.card:focus-visible::before {
+  opacity: 1;
+}
+
+.card:hover .card__content,
+.card:focus .card__content,
+.card:focus-within .card__content {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  -webkit-transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  transform-origin: bottom;
+}
+
+.card:hover h3 {
+  position: absolute;
+  top: 0;
+  z-index: 2;
 }
 
 .booking {
@@ -1298,6 +1356,26 @@ button,
   margin: 0;
   margin-bottom: 28px;
   text-align: left;
+}
+
+.form input::-webkit-input-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input::-moz-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input:-ms-input-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input::-ms-input-placeholder {
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input::placeholder {
+  color: rgba(1, 28, 64, 0.7);
 }
 
 .form input:not([type=checkbox]) {
@@ -1777,11 +1855,17 @@ button,
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .card__content {
-    padding: 29px 36px;
-    -webkit-transform: translate(0, 78%);
-    -ms-transform: translate(0, 78%);
-    transform: translate(0, 78%);
+  .card {
+    width: 100%;
+  }
+
+  .card h3 {
+    margin-bottom: 27px;
+    margin-left: 35px;
+  }
+
+  .card__preview img {
+    width: 100%;
   }
 
   .booking {
@@ -1995,6 +2079,8 @@ button,
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     height: 90vh;
   }
 
@@ -2116,11 +2202,14 @@ button,
     aspect-ratio: 270/386;
   }
 
-  .card__content {
-    padding: 29px 25px;
-    -webkit-transform: translate(0, 81%);
-    -ms-transform: translate(0, 81%);
-    transform: translate(0, 81%);
+  .card h3 {
+    margin-bottom: 18px;
+    margin-left: 25px;
+  }
+
+  .card__preview img {
+    width: 100%;
+    height: 100%;
   }
 
   .booking {
@@ -2261,8 +2350,8 @@ button,
 
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
-    -webkit-box-shadow: 3px 5px 5px 2px rgba(201, 201, 201, 0.5019607843);
-    box-shadow: 3px 5px 5px 2px rgba(201, 201, 201, 0.5019607843);
+    -webkit-box-shadow: 0 0 5px 5px rgba(201, 201, 201, 0.5019607843);
+    box-shadow: 0 0 5px 5px rgba(201, 201, 201, 0.5019607843);
   }
 
   .menu__item a:hover:not(.focus-visible) {
