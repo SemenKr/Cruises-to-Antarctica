@@ -1,4 +1,14 @@
 .address {
+  display: flex;
+  flex-direction: column;
+  margin-top: 75px;
+  row-gap:32px;
+
+  @include vp-1023 {
+    flex-direction: column;
+    margin-top: 68px;
+    row-gap:27px;
+  }
 
   p {
     font-weight: 500;
@@ -32,11 +42,11 @@
     flex: 0 0 18px;
 
     @include vp-1023 {
-      transform: translateY(-5px);
+      margin-top: 4px;
     }
 
     @include vp-767 {
-      transform: translateY(-4px);
+      margin-top: 4px;
     }
   }
 }
@@ -46,10 +56,11 @@
   display: flex;
   flex-direction: column;
   gap: 21px;
+
 }
 
 .address__link {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
 }

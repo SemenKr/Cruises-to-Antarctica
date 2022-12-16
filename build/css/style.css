@@ -810,7 +810,8 @@ button,
 }
 
 .header__menu {
-  margin-top: 8px;
+  margin-top: 3px;
+  margin-right: -6px;
   overflow: hidden;
 }
 
@@ -979,7 +980,7 @@ button,
 
 .about p {
   margin: 0;
-  padding-left: 50px;
+  padding-left: 58px;
   font-weight: 400;
   font-size: 20px;
   line-height: 1;
@@ -1103,8 +1104,10 @@ button,
 }
 
 .catalog {
-  padding-top: 85px;
+  padding-top: 86px;
   padding-bottom: 120px;
+  padding-left: 73px;
+  padding-right: 73px;
 }
 
 .catalog h2 {
@@ -1116,15 +1119,16 @@ button,
 }
 
 .cards-catalog {
-  padding: 0 15px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  justify-items: center;
 }
 
 .card {
@@ -1176,7 +1180,7 @@ button,
   font-weight: 500;
   font-size: 18px;
   line-height: 1.5;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .card dt {
@@ -1190,7 +1194,7 @@ button,
   font-size: 14px;
   line-height: 1.4;
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
 }
 
 .card__preview img {
@@ -1232,8 +1236,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 35px 25px;
-  padding-right: 15px;
+  padding: 29px 25px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1295,6 +1298,10 @@ button,
   position: absolute;
   top: 0;
   z-index: 2;
+}
+
+.card__button {
+  margin-top: 12px;
 }
 
 .booking {
@@ -1510,10 +1517,22 @@ button,
   display: grid;
   -ms-grid-columns: 48% 1fr;
   grid-template-columns: 48% 1fr;
-  padding: 120px 0 91px;
+  padding: 120px 0 121px;
   -webkit-column-gap: 103px;
   -moz-column-gap: 103px;
   column-gap: 103px;
+}
+
+.address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 75px;
+  row-gap: 32px;
 }
 
 .address p {
@@ -1562,9 +1581,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   gap: 10px;
 }
 
@@ -1757,6 +1776,13 @@ button,
   }
 */
 
+@media (max-width: 1279px) {
+  .catalog {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 @media (max-width: 1023px) {
   .container {
     padding: 0 45px;
@@ -1798,7 +1824,7 @@ button,
 
   .features {
     padding-top: 90px;
-    padding-bottom: 100px;
+    padding-bottom: 98px;
     background: center bottom/cover no-repeat #def4fd url("../img/background-adventure-tablet.webp");
   }
 
@@ -1841,7 +1867,7 @@ button,
   }
 
   .catalog {
-    padding-top: 88px;
+    padding-top: 90px;
     padding-bottom: 100px;
   }
 
@@ -1853,10 +1879,11 @@ button,
   .cards-catalog {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
+    width: 100%;
   }
 
   .card {
-    width: 100%;
+    aspect-ratio: 309/386;
   }
 
   .card h3 {
@@ -1866,6 +1893,10 @@ button,
 
   .card__preview img {
     width: 100%;
+  }
+
+  .card__content {
+    padding: 29px 35px;
   }
 
   .booking {
@@ -1927,16 +1958,23 @@ button,
   }
 
   .contacts__container {
-    padding: 100px 0 100px;
+    padding: 100px 0 102px;
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
     column-gap: 30px;
   }
 
+  .address {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 68px;
+    row-gap: 27px;
+  }
+
   .address svg {
-    -webkit-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    transform: translateY(-5px);
+    margin-top: 4px;
   }
 
   .map {
@@ -2069,7 +2107,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-top: 17px;
+    padding-top: 25px;
     padding-left: 20px;
     gap: 26px;
     -webkit-transform: translateX(0);
@@ -2183,6 +2221,8 @@ button,
   }
 
   .catalog {
+    padding-left: 10px;
+    padding-right: 10px;
     padding-top: 57px;
     padding-bottom: 65px;
   }
@@ -2193,9 +2233,20 @@ button,
   }
 
   .cards-catalog {
-    -ms-grid-columns: (1fr)[1];
-    grid-template-columns: repeat(1, 1fr);
-    padding: 0 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 30px;
   }
 
   .card {
@@ -2210,6 +2261,10 @@ button,
   .card__preview img {
     width: 100%;
     height: 100%;
+  }
+
+  .card__content {
+    padding: 29px 25px;
   }
 
   .booking {
@@ -2234,7 +2289,7 @@ button,
   }
 
   .booking__container {
-    row-gap: 32px;
+    row-gap: 33px;
     padding: 0;
   }
 
@@ -2268,7 +2323,7 @@ button,
   .contacts__container {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    padding: 60px 0 69px;
+    padding: 58px 0 66px;
     row-gap: 35px;
   }
 
@@ -2278,9 +2333,7 @@ button,
   }
 
   .address svg {
-    -webkit-transform: translateY(-4px);
-    -ms-transform: translateY(-4px);
-    transform: translateY(-4px);
+    margin-top: 4px;
   }
 
   .map {
